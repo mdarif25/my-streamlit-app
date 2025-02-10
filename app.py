@@ -22,7 +22,7 @@ GA_SCRIPT=f"""
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V69VMS87Q2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){{dataLayer.push(arguments);}}
   gtag('js', new Date());
 
   gtag('config', 'G-V69VMS87Q2');

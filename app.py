@@ -1,4 +1,39 @@
+
 import streamlit as st
+
+
+# Replace 'G-XXXXXXXXXX' with your actual Google Analytics Measurement ID
+#GA_TRACKING_ID = "G-XXXXXXXXXX"
+
+
+
+#GA_SCRIPT = f"""
+#<script async src=
+#<script>
+ # window.dataLayer = window.dataLayer || [];
+ # function gtag(){{dataLayer.push(arguments);}}
+ # gtag('js', new Date());
+ # gtag('config', '{GA_TRACKING_ID}');
+#</script>
+#"""
+
+#<!-- Google tag (gtag.js) -->
+GA_SCRIPT=f"""
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V69VMS87Q2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V69VMS87Q2');
+</script>
+"""
+
+# Inject JavaScript for Google Analytics
+st.markdown(GA_SCRIPT, unsafe_allow_html=True)
+
+
+
 st.title("Movie Recommendation System")
 import pickle
 import requests
